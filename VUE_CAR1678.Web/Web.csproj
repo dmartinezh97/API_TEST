@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+	<!-- Habilitamos los los comentarios xml de los endpoint. -->
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<!-- Habita que nos muestre tantas advertencias al habilitar la línea de arriba. -->
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<UserSecretsId>34d61519-a67b-491e-a92f-1f18c8bd904e</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="Controllers\CategoriesController.cs" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.12.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.13" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="NUnit" Version="3.13.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VUE_CAR1678.Datos\Datos.csproj" />
+    <ProjectReference Include="..\VUE_CAR1678.Entidades\Entidades.csproj" />
+  </ItemGroup>
+</Project>
